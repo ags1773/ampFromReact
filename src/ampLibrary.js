@@ -15,7 +15,6 @@ const accumulateComponentScript = componentName => {
   }
 }
 
-
 const renderToString = (reactComponent) => {
   // put scripts from 'scriptsAccumulator' in head
   // check if layout can be rendered (i.e. if title and stuff is present), else throw error
@@ -26,7 +25,8 @@ const renderToString = (reactComponent) => {
 
     str += headStart
     // figure out how to put meta and title here, add it to str
-    str += scriptsAccumulator.join('')
+    // str += scriptsAccumulator.join('')
+    str += `<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script><script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>`
     str += headEndBodyStart
     str += ReactDOMServer.renderToStaticMarkup(reactComponent)
     str += bodyEnd
