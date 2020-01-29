@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 const {ampifyStory} = require('./dist/ampStoryPageBundle')
 
-app.use(express.static('public'))
-
 app.get('/', (req, res) => {
   res.status(301).redirect('/amp/story')
 })

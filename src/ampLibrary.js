@@ -19,7 +19,7 @@ const accumulateComponentScript = componentName => {
 const renderToString = (reactComponent) => {
   // put scripts from 'scriptsAccumulator' in head
   // check if layout can be rendered (i.e. if title and stuff is present), else throw error
-  let str
+  let str = ''
   try {
     // const check = checkLayout()
     // if (check instanceof Error) throw check
