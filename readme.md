@@ -1,5 +1,6 @@
 ## To run:
-npm i && npm run serveDev
+- First time: `npm i && npm run build`
+- to automatically recompile on code change: `npm run serveDev`
 
 ##  Bundling & nodemon
 - webpack rebuilds bundle ./dist/bundle whenever there is a change (using webpack --watch)
