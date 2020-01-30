@@ -10,9 +10,6 @@ export const headStart = `<!doctype html>
     <link rel="canonical" href=".">
     <style amp-custom></style>`
 
-export const headEndBodyStart = `<title>Get Amped!</title>
-</head>
-<body>`
+export const headEndBodyStart = `</head><body>`
 
-export const bodyEnd = `</body>
-</html>`
+export const bodyEnd = `</body></html>`

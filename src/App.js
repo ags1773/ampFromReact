@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { AMP } from './ampLibrary'
-const { Carousel, FitText, Image } = AMP
+const { Carousel, FitText, Image, Youtube, Title } = AMP
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <Fragment>
+        <Title>This is my AMP page</Title>
         <h1>Header</h1>
         <hr />
         <Carousel
@@ -29,9 +30,21 @@ class App extends React.Component {
           )
         })}
         </Carousel>
+        <Youtube
+          data-videoid="2jLTSzf-5p4"
+          layout="responsive"
+          width="480"
+          height="270"
+        >
+          <Image
+            src="http://i3.ytimg.com/vi/2jLTSzf-5p4/maxresdefault.jpg"
+            placeholder
+            layout="fill">
+          </Image>
+        </Youtube>
         <hr />
         <h1>Footer</h1>
-      </div>
+      </Fragment>
     )
   }
 }
