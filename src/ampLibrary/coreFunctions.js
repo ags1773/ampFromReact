@@ -14,14 +14,11 @@ export const renderToString = (reactComponent) => {
   try {
     // const check = checkLayout()
     // if (check instanceof Error) throw check
-    const helmet = Helmet.renderStatic()
-    const title = helmet.title.toString()
-    const ampScripts = helmet.script.toString()
+    const headStr = getHelmetStr()
     const componentHtml = ReactDOMServer.renderToStaticMarkup(reactComponent)
 
     str += headStart
-    str += title
-    str += ampScripts
+    str += headStr
     str += headEndBodyStart
     str += componentHtml
     str += bodyEnd
@@ -32,3 +29,15 @@ export const renderToString = (reactComponent) => {
     console.error(e)
    }
 }
+
+const getHelmetStr = () => {
+  const helmet = Helmet.renderStatic()
+  let str = ''
+  Object.keys(helmet)
+    .filter(key => ["style", "title", "meta", "script"].includes(key))
+    .forEach(key => {
+      console.log(`Adding ${helmet[key]} to head`)
+      str += helmet[key].toString()
+    })
+  return str
+} 
