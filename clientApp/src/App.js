@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
-import { AMP } from './ampLibrary'
-const { Carousel, FitText, Image, Youtube, Title } = AMP
+import * as quintypeAmp from '../../ampLibrary/dist/ampBundle'
+const {Amp} = quintypeAmp
+const { Carousel, FitText, Image, Youtube, Title } = Amp
+
 
 class App extends React.Component {
   render() {

@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import { Helmet } from "react-helmet";
 
-export const Image = props => {
+const Image = props => {
   return <amp-img {...props}>{props.children}</amp-img>
 }
 
-export const Title = props => {
+const Title = props => {
   return (
     <Helmet>
       <title>{props.children}</title>
@@ -13,7 +13,7 @@ export const Title = props => {
   )
 }
 
-// export const LdJson = props => {
+// const LdJson = props => {
 //   return (
 //     <Helmet>
       
@@ -21,7 +21,7 @@ export const Title = props => {
 //   )
 // }
 
-export const Carousel = props => {
+const Carousel = props => {
   return (
     <Fragment>
       <Helmet>
@@ -33,7 +33,7 @@ export const Carousel = props => {
   )
 }
 
-export const FitText = props => {
+const FitText = props => {
   return (
     <Fragment>
       <Helmet>
@@ -45,7 +45,7 @@ export const FitText = props => {
   )
 }
 
-export const Youtube = props => {
+const Youtube = props => {
   return (
     <Fragment>
       <Helmet>
@@ -56,3 +56,6 @@ export const Youtube = props => {
     </Fragment>
   )
 }
+
+const Amp = {Image, Title, Carousel, FitText, Youtube}
+export default Amp
