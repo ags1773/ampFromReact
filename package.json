@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "serveDev": "webpack --watch & nodemon ./dist/server.js",
+    "serve": "cp ~/work/qt/quintype-amp/dist/bundle.js ./ && webpack && node ./clientApp/dist/server.js",
+    "cp": "cp ~/work/qt/quintype-amp/dist/bundle.js ./",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

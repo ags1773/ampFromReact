@@ -1,6 +1,6 @@
 import React from 'react'
 import App from './App.js'
-import * as quintypeAmp from '../../ampLibrary/dist/ampBundle' // will come from NPM
+import * as quintypeAmp from '../../bundle.js' // will come from NPM
 
 const {renderToString} = quintypeAmp
 

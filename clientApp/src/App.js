@@ -1,18 +1,28 @@
 import React, { Fragment } from 'react'
-import * as quintypeAmp from '../../ampLibrary/dist/ampBundle'
+import * as quintypeAmp from '../../bundle.js'
 const {Amp} = quintypeAmp
-const { Carousel, FitText, Image, Youtube, Title } = Amp
+const {StoryElements, atoms} = Amp
+const { Carousel, FitText, Image, Youtube, Title } = atoms
+const { AmpBlurb, AmpBlockQuote } = StoryElements
 
 
 class App extends React.Component {
   render() {
     return (
       <Fragment>
-        <Title>This is my AMP page</Title>
+        <AmpBlurb>
+          this is a <em>blurb</em>
+          <a href="google.com">link</a>
+          <p>i am a paragraph</p>
+        </AmpBlurb>
+        <AmpBlockQuote>
+          This is a <p>Blockwuote!!</p>
+        </AmpBlockQuote>
+        <Title>This is my CUSTOM AMP page</Title>
         <h1>Header</h1>
         <hr />
         <Carousel
-          layout="fixed"
+          layout="responsive"
           height="450"
           width="500"
           type="slides"

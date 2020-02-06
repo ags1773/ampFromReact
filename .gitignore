@@ -2,3 +2,4 @@ node_modules
 todo
 ampLibrary/dist
 clientApp/dist/*Bundle.js
+bundle.js
